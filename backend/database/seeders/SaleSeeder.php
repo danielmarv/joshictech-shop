@@ -1,17 +1,28 @@
 <?php
-
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
-class SaleSeeder extends Seeder
+class ShopSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
+    public function run()
     {
-        //
+        DB::table('shops')->insert([
+            'name' => 'Shop 1',
+            'description' => 'Description for Shop 1',
+            'address' => 'Address 1',
+            'contact' => 'Contact 1',
+        ]);
+
+        DB::table('shops')->insert([
+            'name' => 'Shop 2',
+            'description' => 'Description for Shop 2',
+            'address' => 'Address 2',
+            'contact' => 'Contact 2',
+        ]);
+
+        // Add more shop records as needed
     }
 }
+

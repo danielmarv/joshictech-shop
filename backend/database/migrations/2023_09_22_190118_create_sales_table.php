@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('inventory', function (Blueprint $table) {
+        Schema::create('sales', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('shop_id'); // Example: Add a shop_id column
+            $table->unsignedBigInteger('user_id'); // Example: Add a user_id column
+            $table->decimal('total_amount', 10, 2); // Example: Add a total_amount column
+            // Add more columns as needed
             $table->timestamps();
         });
     }
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('inventory');
+        Schema::dropIfExists('sales');
     }
 };
