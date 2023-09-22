@@ -35,7 +35,49 @@ Route::prefix('v2')->middleware('json.api')->group(function () {
     Route::post('/register', RegisterController::class);
     Route::post('/password-forgot', ForgotPasswordController::class);
     Route::post('/password-reset', ResetPasswordController::class)->name('password.reset');
-    
+
+    // Shop Routes
+    Route::get('/shops', [ShopController::class, 'index']);
+    Route::post('/shops', [ShopController::class, 'store']);
+    Route::get('/shops/{id}', [ShopController::class, 'show']);
+    Route::put('/shops/{id}', [ShopController::class, 'update']);
+    Route::delete('/shops/{id}', [ShopController::class, 'destroy']);
+
+    // Product Routes
+    Route::get('/products', [ProductController::class, 'index']);
+    Route::post('/products', [ProductController::class, 'store']);
+    Route::get('/products/{id}', [ProductController::class, 'show']);
+    Route::put('/products/{id}', [ProductController::class, 'update']);
+    Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+
+    // Category Routes
+    Route::get('/categories', [CategoryController::class, 'index']);
+    Route::post('/categories', [CategoryController::class, 'store']);
+    Route::get('/categories/{id}', [CategoryController::class, 'show']);
+    Route::put('/categories/{id}', [CategoryController::class, 'update']);
+    Route::delete('/categories/{id}', [CategoryController::class, 'destroy']);
+
+    // Sale Routes
+    Route::get('/sales', [SaleController::class, 'index']);
+    Route::post('/sales', [SaleController::class, 'store']);
+    Route::get('/sales/{id}', [SaleController::class, 'show']);
+    Route::put('/sales/{id}', [SaleController::class, 'update']);
+    Route::delete('/sales/{id}', [SaleController::class, 'destroy']);
+
+    // Inventory Routes
+    Route::get('/inventory', [InventoryController::class, 'index']);
+    Route::post('/inventory', [InventoryController::class, 'store']);
+    Route::get('/inventory/{id}', [InventoryController::class, 'show']);
+    Route::put('/inventory/{id}', [InventoryController::class, 'update']);
+    Route::delete('/inventory/{id}', [InventoryController::class, 'destroy']);
+
+    // Transaction Routes
+    Route::get('/transactions', [TransactionController::class, 'index']);
+    Route::post('/transactions', [TransactionController::class, 'store']);
+    Route::get('/transactions/{id}', [TransactionController::class, 'show']);
+    Route::put('/transactions/{id}', [TransactionController::class, 'update']);
+    Route::delete('/transactions/{id}', [TransactionController::class, 'destroy']);
+
 });
 
 JsonApiRoute::server('v2')->prefix('v2')->resources(function (ResourceRegistrar $server) {
