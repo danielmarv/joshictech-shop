@@ -1,3 +1,4 @@
+<?php
 // Sale.php
 namespace App\Models;
 
