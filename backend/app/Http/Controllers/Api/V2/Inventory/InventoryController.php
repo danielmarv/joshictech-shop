@@ -1,6 +1,6 @@
 <?php
 // app/Http/Controllers/InventoryController.php
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V2\Inventory;
 
 use App\Models\Inventory;
 use Illuminate\Http\Request;

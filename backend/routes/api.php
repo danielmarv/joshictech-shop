@@ -11,6 +11,12 @@ use App\Http\Controllers\Api\V2\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\V2\MeController;
 use LaravelJsonApi\Laravel\Facades\JsonApiRoute;
 use LaravelJsonApi\Laravel\Http\Controllers\JsonApiController;
+use App\Http\Controllers\SaleController;
+use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
