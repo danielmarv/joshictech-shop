@@ -1,5 +1,5 @@
 <?php
-// app/Http/Controllers/ShopController.php
+
 namespace App\Http\Controllers\Api\V2\Shop;
 
 use App\Models\Shop;
