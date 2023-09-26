@@ -106,7 +106,7 @@ export default function App() {
   const [isDemo, setIsDemo] = useState(false);
 
   useEffect(() => {
-    setIsDemo(process.env.REACT_APP_IS_DEMO === "true");
+    setIsDemo(process.env.REACT_APP_IS_DEMO === "false");
   }, []);
 
   // Setting the dir attribute for the body element
@@ -263,7 +263,7 @@ export default function App() {
               <Sidenav
                 color={sidenavColor}
                 brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-                brandName="Material Dashboard 2"
+                brandName="Admin"
                 routes={routes}
                 onMouseEnter={handleOnMouseEnter}
                 onMouseLeave={handleOnMouseLeave}
